@@ -60,8 +60,8 @@ namespace MusicStore
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "972040147913-0mdefn36a8kepca5c8fot2h3fn1a93s8.apps.googleusercontent.com",
-                ClientSecret = "LGLPdEVT4bIZ6JIebP68uN8g"
+                ClientId = "972040147913-qivuhudhc3jrerre39db859puum0p0du.apps.googleusercontent.com",
+                ClientSecret = "0raf4zaK3oL4gk5kDbn7l65S"
             });
         }
     }
