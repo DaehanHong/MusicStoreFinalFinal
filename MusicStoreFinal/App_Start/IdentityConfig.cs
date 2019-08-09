@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using MusicStoreFinal.Models;
+using MusicStore.Models;
 
-namespace MusicStoreFinal
+namespace MusicStore
 {
     public class EmailService : IIdentityMessageService
     {

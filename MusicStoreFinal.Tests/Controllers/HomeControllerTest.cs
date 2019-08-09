@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MusicStoreFinal;
-using MusicStoreFinal.Controllers;
+using MusicStore;
+using MusicStore.Controllers;
 
-namespace MusicStoreFinal.Tests.Controllers
+namespace MusicStore.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest

@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using MusicStoreFinal.Models;
+using MusicStore.Models;
 
-namespace MusicStoreFinal
+namespace MusicStore
 {
     public partial class Startup
     {

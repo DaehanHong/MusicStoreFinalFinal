@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace MusicStoreFinal.Models
+namespace MusicStore.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

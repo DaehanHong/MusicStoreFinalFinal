@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(MusicStoreFinal.Startup))]
-namespace MusicStoreFinal
+[assembly: OwinStartupAttribute(typeof(MusicStore.Startup))]
+namespace MusicStore
 {
     public partial class Startup
     {
