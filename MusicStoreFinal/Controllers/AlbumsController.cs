@@ -13,8 +13,8 @@ namespace MusicStore.Controllers
     [RequireHttps]
     public class AlbumsController : Controller
     {
-        MusicStoreEntities storeDB  = new MusicStoreEntities();
-         object @object;
+        MusicStoreEntities storeDB = new MusicStoreEntities();
+        object @object;
 
         public AlbumsController(object @object)
         {
@@ -43,6 +43,6 @@ namespace MusicStore.Controllers
             return View(album);
         }
 
-       
+
     }
 }
