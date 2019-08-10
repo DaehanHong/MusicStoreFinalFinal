@@ -23,11 +23,12 @@ namespace MusicStore.Models
 
         [StringLength(256)]
         public string Username { get; set; }
-
+       
         [StringLength(160)]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
+       
         [StringLength(160)]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
