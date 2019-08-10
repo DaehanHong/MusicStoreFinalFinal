@@ -268,14 +268,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\80b0d25e.jpg" />
     <Content Include="Content\Images\art-background-blue-1037992.jpg" />
     <Content Include="Content\Images\cellphone-cellular-telephone-close-up-938972.jpg" />
+    <Content Include="Content\Images\login.jpeg" />
     <Content Include="Content\Images\music.jpg" />
-    <Content Include="Content\Images\pexels-photo-1050244.jpeg" />
     <Content Include="Content\Images\pexels-photo-1626481.jpeg" />
     <Content Include="Content\Images\pexels-photo-1706018.jpeg" />
     <Content Include="Content\Images\placeholder.gif" />
+    <Content Include="Content\Images\register.jpeg" />
+    <Content Include="Content\Images\shoppingcart.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -333,12 +334,12 @@
     <Content Include="Views\Orders\Details.cshtml" />
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\Store\Albums.cshtml" />
     <Content Include="Views\Store\Checkout.cshtml" />
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Store\OrderReceive.cshtml" />
     <Content Include="Views\Store\Product.cshtml" />
     <Content Include="Views\Store\ShoppingCart.cshtml" />
-    <Content Include="Views\Store\Albums.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

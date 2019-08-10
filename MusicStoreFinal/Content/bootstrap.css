@@ -1085,8 +1085,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
-  background-color: #fff;
+  color: black;
+  background-color: black;
   background-size:cover;
 }
 input,
@@ -2984,6 +2984,7 @@ select[multiple].input-lg {
     padding-top: 7px;
     margin-bottom: 0;
     text-align: right;
+   
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
