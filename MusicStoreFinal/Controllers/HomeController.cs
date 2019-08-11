@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MusicStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,9 @@ namespace MusicStore.Controllers
     [Route("home/{action=index}")]
     public class HomeController : Controller
     {
+
+        MusicStoreEntities storeDB = new MusicStoreEntities();
+
         [Route("")]
         [Route("home")]
         [Route("home/index")]
@@ -32,6 +36,19 @@ namespace MusicStore.Controllers
             ViewBag.Message = "If you have any problem, don't hesitate. Please contact us. ";
 
             return View();
+        }
+
+        [Route("MusicSearch")]
+        public ActionResult MusicSearch(string q)
+        {
+            var musics = GetMusic(q);
+            return PartialView(musics);
+        }
+
+        [Route("MusicSearch")]
+        private List<Album> GetMusic(string searchString)
+        {
+            return storeDB.Albums.Where(a => a.Title.Contains(searchString)).ToList();
         }
     }
 }
