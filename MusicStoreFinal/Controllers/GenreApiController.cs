@@ -14,7 +14,7 @@ namespace MusicStore.Controllers
 {
     public class GenreApiController : ApiController
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        private MusicStoreEntities storeDB = new MusicStoreEntities();
 
         // GET: api/GenreApi
         public IQueryable<Genre> GetGenres()
@@ -24,7 +24,6 @@ namespace MusicStore.Controllers
 
         // GET: api/GenreApi/5
         [ResponseType(typeof(Genre))]
-        [BasicAuthentication]
         public IHttpActionResult GetGenre(int id)
         {
             Genre genre = storeDB.Genres.Find(id);
@@ -38,7 +37,6 @@ namespace MusicStore.Controllers
 
         // PUT: api/GenreApi/5
         [ResponseType(typeof(void))]
-        [BasicAuthentication]
         public IHttpActionResult PutGenre(int id, Genre genre)
         {
             if (!ModelState.IsValid)
@@ -74,7 +72,6 @@ namespace MusicStore.Controllers
 
         // POST: api/GenreApi
         [ResponseType(typeof(Genre))]
-        [BasicAuthentication]
         public IHttpActionResult PostGenre(Genre genre)
         {
             if (!ModelState.IsValid)
@@ -90,7 +87,6 @@ namespace MusicStore.Controllers
 
         // DELETE: api/GenreApi/5
         [ResponseType(typeof(Genre))]
-        [BasicAuthentication]
         public IHttpActionResult DeleteGenre(int id)
         {
             Genre genre = storeDB.Genres.Find(id);

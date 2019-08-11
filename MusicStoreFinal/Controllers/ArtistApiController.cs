@@ -14,7 +14,7 @@ namespace MusicStore.Controllers
 {
     public class ArtistApiController : ApiController
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
+        private MusicStoreEntities storeDB = new MusicStoreEntities();
 
         // GET: api/ArtistApi
         public IQueryable<Artist> GetArtists()
@@ -24,7 +24,6 @@ namespace MusicStore.Controllers
 
         // GET: api/ArtistApi/5
         [ResponseType(typeof(Artist))]
-        [BasicAuthentication]
         public IHttpActionResult GetArtist(int id)
         {
             Artist artist = storeDB.Artists.Find(id);
@@ -38,7 +37,6 @@ namespace MusicStore.Controllers
 
         // PUT: api/ArtistApi/5
         [ResponseType(typeof(void))]
-        [BasicAuthentication]
         public IHttpActionResult PutArtist(int id, Artist artist)
         {
             if (!ModelState.IsValid)
@@ -74,7 +72,6 @@ namespace MusicStore.Controllers
 
         // POST: api/ArtistApi
         [ResponseType(typeof(Artist))]
-        [BasicAuthentication]
         public IHttpActionResult PostArtist(Artist artist)
         {
             if (!ModelState.IsValid)
@@ -90,7 +87,6 @@ namespace MusicStore.Controllers
 
         // DELETE: api/ArtistApi/5
         [ResponseType(typeof(Artist))]
-        [BasicAuthentication]
         public IHttpActionResult DeleteArtist(int id)
         {
             Artist artist = storeDB.Artists.Find(id);
@@ -120,4 +116,3 @@ namespace MusicStore.Controllers
         }
     }
 }
-// please see that 

@@ -24,7 +24,6 @@ namespace MusicStore.Controllers
 
         // GET: api/AlbumApi/5
         [ResponseType(typeof(Album))]
-        [BasicAuthentication]
         public IHttpActionResult GetAlbum(int id)
         {
             Album album = storeDB.Albums.Find(id);
