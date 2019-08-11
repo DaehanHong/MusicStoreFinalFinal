@@ -11,9 +11,19 @@ namespace MusicStore
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+           routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-   
+            
+            routes.MapRoute("Orders/Index", "Orders/Index/{index}", new { controller = "Orders", action = "Index", id = UrlParameter.Optional }
+
+
+              );
+
+
+            routes.MapRoute("Store/Index", "Store/Index/{index}", new { controller = "Store", action = "Index", id = UrlParameter.Optional }
+
+
+             );
 
 
             routes.MapRoute(
