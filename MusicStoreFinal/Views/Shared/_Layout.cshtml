@@ -58,6 +58,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">Music search</div>
         <div class="panel-body">
+            <!--AJAX.BEGIN FORM sets a GET method, a target id, a loading element, a method to run if it fails and the Replace function-->
             @using (Ajax.BeginForm("MusicSearch", "Home",
                 new AjaxOptions
                 {
@@ -83,6 +84,7 @@
         </footer>
     </div>
 
+    <!--All necessary packages and scripts for AJAX-->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <script src="~/scripts/app/MusicStore.js"></script>

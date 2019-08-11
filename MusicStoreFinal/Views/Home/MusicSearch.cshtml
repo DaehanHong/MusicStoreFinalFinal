@@ -25,6 +25,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td style="border:5px solid red;padding:0;">
+                <!--Adds a button to add the option to the cart-->
                 <a href=" @Url.Action("AddToCart","Store",new { AlbumId = item.AlbumId })">
                     <button class="btn btn-primary">Add to Cart</button>
                 </a>
