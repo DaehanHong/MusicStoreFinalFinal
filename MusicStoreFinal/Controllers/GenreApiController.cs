@@ -37,6 +37,7 @@ namespace MusicStore.Controllers
 
         // PUT: api/GenreApi/5
         [ResponseType(typeof(void))]
+        [BasicAuthentication]
         public IHttpActionResult PutGenre(int id, Genre genre)
         {
             if (!ModelState.IsValid)
@@ -72,6 +73,7 @@ namespace MusicStore.Controllers
 
         // POST: api/GenreApi
         [ResponseType(typeof(Genre))]
+        [BasicAuthentication]
         public IHttpActionResult PostGenre(Genre genre)
         {
             if (!ModelState.IsValid)
@@ -87,6 +89,7 @@ namespace MusicStore.Controllers
 
         // DELETE: api/GenreApi/5
         [ResponseType(typeof(Genre))]
+        [BasicAuthentication]
         public IHttpActionResult DeleteGenre(int id)
         {
             Genre genre = storeDB.Genres.Find(id);
