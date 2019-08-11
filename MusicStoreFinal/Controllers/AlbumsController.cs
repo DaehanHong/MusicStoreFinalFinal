@@ -29,6 +29,7 @@ namespace MusicStore.Controllers
         }
 
         // GET: Albums/Details/5
+        [Route("albums/details/{id}")]
         public ActionResult Details(int? id)
         {
             if (id == null)

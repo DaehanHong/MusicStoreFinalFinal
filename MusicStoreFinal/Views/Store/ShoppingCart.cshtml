@@ -35,9 +35,7 @@
     CartTotal += item.Album.Price * item.Count;
     <tr>
         <td>
-            <a href="/Albums/Details?id=@item.AlbumId">
                 @Html.DisplayFor(modelItem => item.Album.Title)
-            </a>
             <br />
             <img src="@item.Album.AlbumArtUrl" alt="cover" />
        </td>

@@ -271,6 +271,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\album.jpeg" />
     <Content Include="Content\Images\art-background-blue-1037992.jpg" />
     <Content Include="Content\Images\cellphone-cellular-telephone-close-up-938972.jpg" />
     <Content Include="Content\Images\login.jpeg" />
