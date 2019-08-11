@@ -55,8 +55,8 @@
     </div>
     <!--This adds a search bar to the page. It attaches the results of the AJAX search
         to the div with the id 'searchresults'-->
-    <div class="panel panel-default">
-        <div class="panel-heading">Music search</div>
+    <div class="" style="background:none">
+        
         <div class="panel-body">
             <!--AJAX.BEGIN FORM sets a GET method, a target id, a loading element, a method to run if it fails and the Replace function-->
             @using (Ajax.BeginForm("MusicSearch", "Home",
@@ -69,11 +69,11 @@
                     UpdateTargetId = "searchresults",
                 }))
             {
-                <input type="text" name="q" />
+                <input type="text" placeholder="Search" name="q" />
                 <input type="submit" value="search" />
                 <img id="ajax-loader" src="@Url.Content("~/Images/ajax-loader.gif")" style="display:none" />
             }
-            <div id="searchresults" style="background-image: url('../../Content/Images/shoppingcart.jpeg');"></div>
+            <div id="searchresults" style="background:none"></div>
         </div>
     </div>
     <div class="container body-content">

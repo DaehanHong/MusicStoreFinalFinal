@@ -33,6 +33,8 @@
 {
     //logic for keeping cart total updated//
     CartTotal += item.Album.Price * item.Count;
+    
+    
     <tr>
         <td>
                 @Html.DisplayFor(modelItem => item.Album.Title)
@@ -48,6 +50,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Album.Price)
         </td>
+      
         <td>
             @*@Html.ActionLink("Edit", "Edit", new { id=item.RecordId }) |
             @Html.ActionLink("Details", "Details", new { id=item.RecordId }) |*@
