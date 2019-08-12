@@ -14,8 +14,21 @@ namespace MusicStore.Controllers
     [Authorize]
     public class OrdersController : Controller
     {
-         MusicStoreEntities storeDB = new MusicStoreEntities();
+        MusicStoreEntities storeDB = new MusicStoreEntities();
 
+        IOrderDAL DAL;
+        public OrdersController(IOrderDAL DAL)
+        {
+            this.DAL = DAL;
+        }
+
+
+        public OrdersController()
+        {
+            this.DAL = new OrderDAL();
+        }
+
+        [Route("orders/list")]
         // GET: Orders
         public ActionResult Index()
         {
@@ -27,12 +40,12 @@ namespace MusicStore.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View("Error");
             }
-            Order order = storeDB.Orders.Find(id);
+            Order order = DAL.FindById(id);
             if (order == null)
             {
-                return HttpNotFound();
+                return View("Error");
             }
             return View(order);
         }
@@ -40,7 +53,7 @@ namespace MusicStore.Controllers
         // GET: Orders/Create
         public ActionResult Create()
         {
-            return View();
+            return View("Create");
         }
 
         // POST: Orders/Create
@@ -52,8 +65,7 @@ namespace MusicStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                storeDB.Orders.Add(order);
-                storeDB.SaveChanges();
+                DAL.SaveNewOrder(order);
                 return RedirectToAction("Index");
             }
 
@@ -67,7 +79,7 @@ namespace MusicStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = storeDB.Orders.Find(id);
+            Order order = DAL.FindById(id);
             if (order == null)
             {
                 return HttpNotFound();
@@ -84,8 +96,7 @@ namespace MusicStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                storeDB.Entry(order).State = EntityState.Modified;
-                storeDB.SaveChanges();
+                DAL.UpdateOrder(order);
                 return RedirectToAction("Index");
             }
             return View(order);
@@ -95,7 +106,7 @@ namespace MusicStore.Controllers
         {
             if (disposing)
             {
-                storeDB.Dispose();
+                DAL.Dispose();
             }
             base.Dispose(disposing);
         }

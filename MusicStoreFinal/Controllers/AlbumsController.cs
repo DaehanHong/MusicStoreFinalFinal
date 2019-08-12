@@ -13,7 +13,6 @@ namespace MusicStore.Controllers
     [RequireHttps]
     public class AlbumsController : Controller
     {
-        MusicStoreEntities storeDB = new MusicStoreEntities();
         object @object;
 
         public AlbumsController(object @object)
@@ -21,25 +20,39 @@ namespace MusicStore.Controllers
             this.@object = @object;
         }
 
+        IAlbumDAL DAL;
+        public AlbumsController(IAlbumDAL DAL)
+        {
+            this.DAL = DAL;
+        }
+
+        public AlbumsController()
+        {
+            this.DAL = new AlbumDAL();
+        }
+
+        //AlbumDAL DAL = new AlbumDAL();
         // GET: Albums
         public ActionResult Index()
         {
-            var albums = storeDB.Albums.Include(a => a.Artist).Include(a => a.Genre);
+            var albums = DAL.GetAllAlbums();
             return View(albums.ToList());
         }
 
         // GET: Albums/Details/5
-        [Route("albums/details/{id}")]
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return View("Error");
+
             }
-            Album album = storeDB.Albums.Find(id);
+            Album album = DAL.FindById(id);
             if (album == null)
             {
-                return HttpNotFound();
+                //return HttpNotFound();
+                return View("Error");
             }
             return View(album);
         }

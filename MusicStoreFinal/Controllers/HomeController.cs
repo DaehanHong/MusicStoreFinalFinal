@@ -24,7 +24,7 @@ namespace MusicStore.Controllers
         // action to view message and title
         public ActionResult About()
         {
-            ViewBag.Title = "Welcome Our Music Store Web site!";
+            //ViewBag.Title = "Welcome Our Music Store Web site!";
             ViewBag.Message = "We are a world renowned Music Store with latest Music";
 
             return View();
@@ -33,7 +33,7 @@ namespace MusicStore.Controllers
         public ActionResult Contact() 
         {
             ViewBag.Title = "This is our Contact Page.";
-            ViewBag.Message = "If you have any problem, don't hesitate. Please contact us. ";
+            ViewBag.Message = "If you have any problem, don't hesitate. Please contact us.";
 
             return View();
         }

@@ -14,8 +14,8 @@ namespace MusicStore.Controllers
         // GET: Store
         public ActionResult Index()
         {
-            var genres = storeDB.Genres.OrderBy(g => g.Name).ToList();
-            return View(genres);
+            var genres = storeDB.Genres.OrderBy(g => g.Name);
+            return View(genres.ToList());    
         }
 
         // GET: Store/Albums?genre=Name
