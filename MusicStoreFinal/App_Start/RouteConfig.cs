@@ -11,9 +11,9 @@ namespace MusicStore
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-           routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+           routes.IgnoreRoute("{resource}.axd/{*pathInfo}"); // we are doing routing in this step
 
-            
+            //map it to specific action method
             routes.MapRoute("Orders/Index", "Orders/Index/{index}", new { controller = "Orders", action = "Index", id = UrlParameter.Optional }
 
 
@@ -24,11 +24,11 @@ namespace MusicStore
 
 
              );
-
+            // the application matches the incoming url path
 
             routes.MapRoute(
                name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{controller}/{action}/{id}", //url of incoming requests and map them to action 
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
