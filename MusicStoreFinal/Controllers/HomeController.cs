@@ -21,7 +21,7 @@ namespace MusicStore.Controllers
         {
             return View();
         }
-
+        // action to view message and title
         public ActionResult About()
         {
             ViewBag.Title = "Welcome Our Music Store Web site!";
@@ -29,15 +29,15 @@ namespace MusicStore.Controllers
 
             return View();
         }
-
-        public ActionResult Contact()
+        // action to view message and title
+        public ActionResult Contact() 
         {
             ViewBag.Title = "This is our Contact Page.";
             ViewBag.Message = "If you have any problem, don't hesitate. Please contact us. ";
 
             return View();
         }
-
+        //for music search through search bar
         [Route("MusicSearch")]
         public ActionResult MusicSearch(string q)
         {

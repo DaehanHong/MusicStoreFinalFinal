@@ -6,6 +6,7 @@ using System.Data.Entity;
 
 namespace MusicStore.Models
 {
+    // here we used the MVC music store database to show our to see like real data base
     // this class is for our database part
     // to set genre, artist, album
     // and to store genre, artist, album
